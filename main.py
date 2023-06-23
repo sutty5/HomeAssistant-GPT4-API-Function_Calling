@@ -1,5 +1,7 @@
-from home_assistant_api import HomeAssistant
+from function_calling import FunctionCalling
 
-home_assistant = HomeAssistant(instance_url="")
+function_calling = FunctionCalling()
 
-
+while True:
+    user_command = input("User: ")
+    function_calling.run_conversation(user_command)
